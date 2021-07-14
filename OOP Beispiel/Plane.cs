@@ -13,10 +13,9 @@ namespace OOP_Beispiel
             Console.WriteLine("Die Räder befinden sich in der Luft.");
         }
 
-        public void Landing()
+        public virtual void Landing()
         {
-            Console.WriteLine("Landeanflug beginnt.");
-
+            Console.WriteLine("Landeanflug beginnt mit Passagieren.");
         }
     }
 }

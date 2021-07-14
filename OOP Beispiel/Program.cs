@@ -34,9 +34,18 @@ namespace OOP_Beispiel
                 Speed = 350
             };
 
+            Helicopter heli = new Helicopter()
+            {
+                Acceleration = 250,
+                DoorCount = 0,
+                BreakSpeed = 25,
+                Speed = 350
+            };
+
             vehicles.Add(car);
             vehicles.Add(plane);
             vehicles.Add(motorcycle);
+            vehicles.Add(heli);
 
             Console.WriteLine("Welches Fahrzeug möchtest du fahren?");
             var userInput = Console.ReadLine();
@@ -49,20 +58,27 @@ namespace OOP_Beispiel
 
                     vehicle.LogInformation();
 
-                    if(userInput == "Car")
+                    if(userInput == nameof(Car))
                     {
                         Car myCar = vehicle as Car;
                         myCar.Move();
-                    } else if( userInput == "Plane")
+                    } else if( userInput == nameof(Plane))
                     {
                         Plane myPlane = vehicle as Plane;
                         myPlane.Move();
                         myPlane.Landing();
-                    } else if(userInput == "Motorcycle")
+                    } else if(userInput == nameof(Motorcycle))
                     {
                         Motorcycle myBike = vehicle as Motorcycle;
                         myBike.Move();
-                    } else
+                    }
+                    else if (userInput == nameof(Helicopter))
+                    {
+                        Helicopter myHeli = vehicle as Helicopter;
+                        myHeli.Move();
+                        myHeli.Landing();
+                    }
+                    else
                     {
                         Console.WriteLine("Dieses Fahrzeug steht nicht bereit.");
                     }
