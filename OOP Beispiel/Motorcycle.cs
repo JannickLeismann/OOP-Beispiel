@@ -4,7 +4,11 @@ using System.Text;
 
 namespace OOP_Beispiel
 {
-    class Motorcycle : Vehicle
+    class Motorcycle : Vehicle, IVehicle
     {
+        public void Move()
+        {
+            Console.WriteLine("Zwei Räder haben bodenkontakt.");
+        }
     }
 }

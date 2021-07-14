@@ -17,6 +17,7 @@ namespace OOP_Beispiel
             };
 
             car.LogInformation();
+            car.Move();
 
             Plane plane = new Plane()
             {
@@ -28,6 +29,18 @@ namespace OOP_Beispiel
             };
 
             plane.LogInformation();
+            plane.Move();
+
+            Motorcycle motorcycle = new Motorcycle()
+            {
+                Acceleration = 250,
+                DoorCount = 0,
+                BreakSpeed = 25,
+                Speed = 350
+            };
+
+            motorcycle.LogInformation();
+            motorcycle.Move();
         }
     }
 }
